@@ -43,7 +43,7 @@ class Scattegories(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         await self.bot.change_presence(
-            activity=discord.Game(name="Scattering words muahahahahaha")
+            activity=discord.Game(name=f"Seeking for words about categories for {len(bot.users)} users in {len(bot.guilds)} servers!")
         )
         print("Bot is ready!")
 
