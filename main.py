@@ -9,6 +9,19 @@ bot = commands.Bot(
 )
 TOKEN = ""
 
+@bot.command()
+async def invite(ctx):
+    embed = discord.Embed(
+        title="Invite Me!",
+        description="You can invite me [here](https://discord.com/oauth2/authorize?client_id=942371791874166785&permissions=8&scope=bot).",
+        color=0xFFA500,
+    )
+    embed.set_footer(
+        text=f"Command Invoked By {ctx.author} | Made by SockYeh#0001",
+        icon_url=ctx.author.avatar_url,
+    )
+
+    await ctx.send(embed=embed)
 
 @bot.command()
 async def load(ctx, extension):
