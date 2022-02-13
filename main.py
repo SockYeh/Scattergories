@@ -23,6 +23,16 @@ async def invite(ctx):
 
     await ctx.send(embed=embed)
 
+
+@bot.command(aliases=['source_code','src'])
+async def sourcecode(ctx):
+  embed = discord.Embed(title='Source Code', description='You can find my source code [here](https://github.com/SockYeh/Scattergories).', color=0xffa500)
+  embed.set_footer(
+        text=f"Command Invoked By {ctx.author} | Made by SockYeh#0001",
+        icon_url=ctx.author.avatar_url,
+    )
+  await ctx.channel.send(embed=embed)
+
 @bot.command()
 async def load(ctx, extension):
     bot.load_extension(f"cogs.{extension}")
